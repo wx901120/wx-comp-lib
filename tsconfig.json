@@ -1,0 +1,14 @@
+// tsconfig的配置项总共分为5类， files,extends,include,exclude and references
+/*
+ 1. files: 指定需要被编译的文件列表
+ 2. extends： 指定需要继承的配置文件路径
+ 3. include： 指定哪些ts文件需要被编译
+ 4. exclude： 指定排除哪些文件不需要被编译
+ 5. references： 将配置分成小块
+*/
+{
+  "files": [],
+  "references": [
+    {"path": "./tsconfig.web.json"}
+  ]
+}

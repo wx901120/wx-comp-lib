@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "composite": true,// 开启时会强制执行某些约束
+        "jsx": "preserve",// 控制.tsx文件编译为.js文件时的输出方式，preserve是不对jsx转换，直接生成.jsx文件
+        "lib": ["ES2018","DOM","DOM.Iterable"], // 指定需要哪些内建库的API或类型定义,比如，如果你的程序不运行在浏览器上，那么就不需要DOM的类型定义
+        "skipLibCheck": true
+    },
+    "include": ["packages", "typings/components.d.ts", "typings/env.d.ts"],// 只针对这些目录或者文件进行编译和检查
+    "exclude": [
+        "node_modules",
+        
+    ]
+}

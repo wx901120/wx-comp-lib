@@ -1,0 +1,41 @@
+{
+  "name": "wx-comp-lib",
+  "version": "1.0.0",
+  "description": "结合`element-plus`，从0到1搭建自己的UI组件库，记录和分享学到的东西，持续完善～",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ax772090/wx-comp-lib.git"
+  },
+  "keywords": [
+    "vue3+ts+element-plus"
+  ],
+  "author": "wangxing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ax772090/wx-comp-lib/issues"
+  },
+  "homepage": "https://github.com/ax772090/wx-comp-lib#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "vue": "^3.2.37"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "react",
+        "react-dom"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}

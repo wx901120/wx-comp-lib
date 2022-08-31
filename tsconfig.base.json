@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",// 编译输出文件路径
+    "target": "es2018",// 编译输出目标版本
+    "module": "esnext",// 模块编译后的版本
+    "baseUrl": ".",// 定义根目录，当你厌倦了导入文件时总是 "../" 或 "./"，或需要在移动文件时更改路径，这是一个很好的解决方法。
+    "sourceMap": false,// 默认不输出ts源码，在开发环境是可以配置为true，方便调试
+    "moduleResolution": "node",// 模块解析策略：'node' （Node.js） 或 'classic' （在 TypeScript 1.6 版本之前使用）
+    "allowJs": false,// 是否容许在ts文件中引入js文件，设置true，将被正常引入，是一种可以允许 .ts 和 .tsx 与现有的 JavaScript 文件共存的方式
+    "strict": true,// 严格模式
+    "noUnusedLocals": true,// 没有被使用的局部变量需要提示错误信息
+    "resolveJsonModule": true,// 是否容许import .json文件，设置false时，将会报错，ts文件默认不支持解析json文件
+    "allowSyntheticDefaultImports": true,// 容许合成默认导入
+    "esModuleInterop": true,// es模块的互操作性，一般和allowSyntheticDefaultImports配合使用
+    "removeComments": false, // 是否移除注释
+    "rootDir": ".", // 用于在输出目录(dist)中保持与输入目录中相同的目录结构，具体可以参考https://www.typescriptlang.org/zh/tsconfig#rootDir的解释
+    "types": [],
+    "paths": {// 文件路径的映射，这样你就可以通过import xx from '@element-plus/constants' 引入packages/constants目录下的文件了
+      "@element-plus/*": ["packages/*"]
+    }
+  }
+}
