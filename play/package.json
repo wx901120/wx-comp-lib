@@ -1,0 +1,22 @@
+{
+  "name": "@element-plus/play",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "unplugin-vue-components": "^0.22.9",
+    "vite": "^3.2.3",
+    "vite-plugin-inspect": "^0.7.7",
+    "vite-plugin-mkcert": "^1.10.1"
+  },
+  "dependencies": {
+    "vue": "^3.2.42"
+  }
+}

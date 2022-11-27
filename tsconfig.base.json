@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es2018",
+    "module": "esnext",
+    "sourceMap": false,
+    "allowJs": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "rootDir": ".",
+    "types": [],
+    // 下面三个是包之间引用需要的
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      "@element-plus/*": ["packages/*"]
+    }
+  }
+}
