@@ -1,0 +1,17 @@
+{
+  "name": "element-plus",
+  "version": "1.0.0",
+  "description": "A Component Library for Vue 3",
+  "keywords":[
+    "element-plus",
+    "element",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "author": "",
+  "license": "ISC"
+}

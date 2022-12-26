@@ -5,7 +5,7 @@
     "play"
   ],
   "scripts": {
-    "dev": "pnpm -C play dev"
+    "dev-play": "pnpm -C play dev"
   },
   "devDependencies": {
     "@element-plus/build": "workspace:^0.0.1",

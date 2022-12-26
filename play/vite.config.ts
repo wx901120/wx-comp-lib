@@ -30,9 +30,11 @@ const esbuildPlugin = (): Plugin => ({
 
 export default defineConfig(async ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  
 
   return {
     resolve: {
+      // 主要是匹配element-plus文件夹下面的内容
       alias: [
         {
           find: /^element-plus(\/(es|lib))?$/, // (es|lib)? 表示匹配0个或其中一个
@@ -60,7 +62,8 @@ export default defineConfig(async ({ mode }) => {
       }),
       // 将.vue文件转化为js
       esbuildPlugin(),
-      // 自动导入组件的,具体功能参考官网介绍
+      // 自动导入组件的,具体功能参考官网介绍，这也是为什么play里面没有引入components包，但是可以直接像这样使用组件：<el-button></el-button>
+      // 因为就是通过这个自动导入组件的
       Components({
         include: `${__dirname}/**`,
         resolvers: ElementPlusResolver({ importStyle: "sass" }),// 解析器
