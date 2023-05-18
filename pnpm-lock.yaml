@@ -6,21 +6,36 @@ importers:
     specifiers:
       '@element-plus/build': workspace:^0.0.1
       '@element-plus/build-utils': workspace:*
+      '@element-plus/components': workspace:*
+      '@element-plus/hooks': workspace:*
       '@element-plus/utils': workspace:*
       '@pnpm/find-workspace-packages': ^5.0.5
       '@pnpm/logger': ^5.0.0
       '@types/fs-extra': ^9.0.13
       '@types/jsdom': ^20.0.1
+      '@types/lodash': ^4.14.194
+      '@types/lodash-es': ^4.17.7
       '@types/node': ^18.11.9
       '@types/sass': ^1.43.1
       '@vitejs/plugin-vue': ^3.2.0
       consola: ^2.15.3
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.3
       sass: ^1.56.1
+      type-fest: ^3.10.0
       typescript: ^4.8.4
       unplugin-vue-macros: ^0.16.2
       vue: ^3.2.42
     dependencies:
+      '@element-plus/components': link:packages/components
+      '@element-plus/hooks': link:packages/hooks
       '@element-plus/utils': link:packages/utils
+      '@types/lodash': 4.14.194
+      '@types/lodash-es': 4.17.7
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.3_tknf7errc3xdqocd3ryzzla7vq
     devDependencies:
       '@element-plus/build': link:internal/build
       '@element-plus/build-utils': link:internal/build-utils
@@ -33,6 +48,7 @@ importers:
       '@vitejs/plugin-vue': 3.2.0_vue@3.2.42
       consola: 2.15.3
       sass: 1.56.1
+      type-fest: 3.10.0_typescript@4.8.4
       typescript: 4.8.4
       unplugin-vue-macros: 0.16.2_vue@3.2.42
       vue: 3.2.42
@@ -1687,6 +1703,16 @@ packages:
     dependencies:
       keyv: 4.5.2
     dev: true
+
+  /@types/lodash-es/4.17.7:
+    resolution: {integrity: sha512-z0ptr6UI10VlU6l5MYhGwS4mC8DZyYer2mCoyysZtSF7p26zOX8UpbrV0YpNYLGS8K4PUFIyEr62IMFFjveSiQ==}
+    dependencies:
+      '@types/lodash': 4.14.194
+    dev: false
+
+  /@types/lodash/4.14.194:
+    resolution: {integrity: sha512-r22s9tAS7imvBt2lyHC9B8AGwWnXaYb1tY09oyLkXDs4vArpYJzw09nj8MLx5VfciBPGIb+ZwG0ssYnEPJxn/g==}
+    dev: false
 
   /@types/node/13.13.52:
     resolution: {integrity: sha512-s3nugnZumCC//n4moGGe6tkNMyYEdaDBitVjwPxXmR5lnMG5dHePinH2EdxkG3Rh1ghFHHixAG4NJhpJW1rthQ==}
@@ -4169,9 +4195,24 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lodash-unified/1.0.3_tknf7errc3xdqocd3ryzzla7vq:
+    resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': 4.17.7
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+    dev: false
+
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /lowercase-keys/2.0.0:
     resolution: {integrity: sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==}
@@ -5588,6 +5629,15 @@ packages:
   /type-fest/0.6.0:
     resolution: {integrity: sha512-q+MB8nYR1KDLrgr4G5yemftpMC7/QLqVndBmEEdqzmNj5dcFOO4Oo8qlwZE3ULT3+Zim1F8Kq4cBnikNhlCMlg==}
     engines: {node: '>=8'}
+    dev: true
+
+  /type-fest/3.10.0_typescript@4.8.4:
+    resolution: {integrity: sha512-hmAPf1datm+gt3c2mvu0sJyhFy6lTkIGf0GzyaZWxRLnabQfPUqg6tF95RPg6sLxKI7nFLGdFxBcf2/7+GXI+A==}
+    engines: {node: '>=14.16'}
+    peerDependencies:
+      typescript: '>=4.7.0'
+    dependencies:
+      typescript: 4.8.4
     dev: true
 
   /typedarray-to-buffer/3.1.5:

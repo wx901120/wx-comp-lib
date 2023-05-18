@@ -1,0 +1,33 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.formatOnSave": true,
+	"npm.packageManager": "pnpm", //使用 pnpm 作为运行脚本的包管理器
+	"eslint.probe": [
+		// 针对以下文件扩展格式进行eslint检查
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"vue",
+		"markdown",
+		"json", //新增的
+		"jsonc" // 新增的
+	],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"html",
+		"vue",
+		"markdown",
+		"json",
+		"jsonc"
+	],
+	"vite.devCommand": "pnpm run dev -- --", // 这里两个--代表啥呢？
+	"i18n-ally.localesPaths": "packages/locale/lang",
+	"i18n-ally.enabledParsers": ["ts"],
+	"i18n-ally.enabledFrameworks": ["vue", "vue-sfc"],
+	"i18n-ally.keystyle": "nested"
+}

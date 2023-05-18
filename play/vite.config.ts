@@ -11,6 +11,7 @@ import mkcert from "vite-plugin-mkcert";
 // https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
 import VueMacros from "unplugin-vue-macros/vite";
 
+// epRoot:packages/element-plus
 import { epRoot, pkgRoot } from "@element-plus/build-utils";
 import esbuild from "rollup-plugin-esbuild";
 
@@ -28,13 +29,22 @@ const esbuildPlugin = (): Plugin => ({
   enforce: "post",
 });
 
-export default defineConfig(async ({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), "");
-  
+export default defineConfig(({ mode }) => {
 
+  // 根据当前工作目录中的mode 记载 .env文件
+  // 设置第三个参数为 '' 来加载所有环境变量，而不管是否有 `VITE_` 前缀。
+  const env = loadEnv(mode, process.cwd(), "");
+
+  /**
+   * {
+        find: /^element-plus(\/(es|lib))?$/, // (es|lib)? 表示匹配0个或其中一个
+        replacement: path.resolve(epRoot, "index.ts"),
+      },
+      例如：element-plus/es => packages/element-plus/index.ts
+   */
   return {
     resolve: {
-      // 主要是匹配element-plus文件夹下面的内容
+      // 主要是匹配element-plus这个包文件夹下面的内容
       alias: [
         {
           find: /^element-plus(\/(es|lib))?$/, // (es|lib)? 表示匹配0个或其中一个
@@ -48,7 +58,7 @@ export default defineConfig(async ({ mode }) => {
     },
     server: {
       host: true,
-      https: !!env.HTTPS,
+      https: !!env.HTTPS, //启用 TLS + HTTP/2
     },
     plugins: [
       // 探索并扩充更多宏和语法糖到 Vue的插件
@@ -77,5 +87,6 @@ export default defineConfig(async ({ mode }) => {
     esbuild: {
       target: "chrome64",
     },
+    clearScreen: false,
   };
 });

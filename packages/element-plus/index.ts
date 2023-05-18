@@ -1,3 +1,5 @@
-// export * from '@element-plus/components/button'
 import installer from './defaults'
+
+export * from '@element-plus/components'
+
 export default installer

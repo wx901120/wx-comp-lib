@@ -1,32 +1,42 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "play"
-  ],
-  "scripts": {
-    "dev-play": "pnpm -C play dev"
-  },
-  "devDependencies": {
-    "@element-plus/build": "workspace:^0.0.1",
-    "@element-plus/build-utils": "workspace:*",
-    "@pnpm/find-workspace-packages": "^5.0.5",
-    "@pnpm/logger": "^5.0.0",
-    "@types/fs-extra": "^9.0.13",
-    "@types/jsdom": "^20.0.1",
-    "@types/node": "^18.11.9",
-    "@types/sass": "^1.43.1",
-    "@vitejs/plugin-vue": "^3.2.0",
-    "consola": "^2.15.3",
-    "sass": "^1.56.1",
-    "typescript": "^4.8.4",
-    "unplugin-vue-macros": "^0.16.2",
-    "vue": "^3.2.42"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.42"
-  },
-  "dependencies": {
-    "@element-plus/utils": "workspace:*"
-  }
+	"private": true,
+	"workspaces": [
+		"packages/*",
+		"play"
+	],
+	"scripts": {
+		"dev-play": "pnpm -C play dev",
+		"stub": "pnpm run -r --parallel stub",
+		"postinstall": "pnpm stub"
+	},
+	"devDependencies": {
+		"@element-plus/build": "workspace:^0.0.1",
+		"@element-plus/build-utils": "workspace:*",
+		"@pnpm/find-workspace-packages": "^5.0.5",
+		"@pnpm/logger": "^5.0.0",
+		"@types/fs-extra": "^9.0.13",
+		"@types/jsdom": "^20.0.1",
+		"@types/node": "^18.11.9",
+		"@types/sass": "^1.43.1",
+		"@vitejs/plugin-vue": "^3.2.0",
+		"consola": "^2.15.3",
+		"sass": "^1.56.1",
+		"type-fest": "^3.10.0",
+		"typescript": "^4.8.4",
+		"unplugin-vue-macros": "^0.16.2",
+		"vue": "^3.2.42"
+	},
+	"peerDependencies": {
+		"vue": "^3.2.42"
+	},
+	"dependencies": {
+		"@element-plus/components": "workspace:*",
+		"@element-plus/hooks": "workspace:*",
+		"@element-plus/utils": "workspace:*",
+		"@types/lodash": "^4.14.194",
+		"@types/lodash-es": "^4.17.7",
+		"lodash": "^4.17.21",
+		"lodash-es": "^4.17.21",
+		"lodash-unified": "^1.0.3"
+	}
 }

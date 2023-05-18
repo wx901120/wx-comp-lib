@@ -1,3 +1,4 @@
-import { ElButton } from "@element-plus/components/button";
+import { ElButton } from '@element-plus/components/button'
 
-export default [ElButton];
+import type { Plugin } from 'vue'
+export default [ElButton] as Plugin[]

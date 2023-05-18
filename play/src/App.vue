@@ -1,8 +1,7 @@
 <template>
     <div class="play-container">
-        ab
         <!-- 这个el-button组件是通过在vite.config.ts中自动导入的，所以可以直接使用 -->
-        <el-button>test</el-button>
+        <el-button></el-button>
     </div>
 </template>
 
